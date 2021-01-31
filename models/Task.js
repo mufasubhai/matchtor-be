@@ -2,16 +2,29 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
-  handle: {
+  mentorId: {
+    type: ObjectId,
+    required: true
+  },
+  menteeId: {
+    type: ObjectId,
+    required: true
+  },
+  desription: {
     type: String,
     required: true
   },
-  email: {
-    type: String,
+  dueDate: {
+    type: Date,
     required: true
   },
-  password: {
-    type: String,
+  createDate: {
+      type: Date,
+      required: true
+  }
+  completed: {
+    type: Boolean,
+    default: false,
     required: true
   }
 }, {
