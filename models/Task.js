@@ -21,7 +21,7 @@ const TaskSchema = new Schema({
   createDate: {
       type: Date,
       required: true
-  }
+  },
   completed: {
     type: Boolean,
     default: false,
